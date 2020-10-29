@@ -9,13 +9,13 @@ install:
   - sudo apt-get update
 
 script:
-  - bash printf "deb https://oplab9.parqtec.unicamp.br/pub/repository/debian/ ./" >> /etc/apt/sources.list
-  - bash wget https://oplab9.parqtec.unicamp.br/pub/key/openpower-gpgkey-public.asc
-  - bash apt-key add openpower-gpgkey-public.asc
-  - bash apt-get update
-  - bash apt -y install docker-ce
-  - bash apt -y install sudo
-  - bash apt -y install conntrack
-  - bash apt-get -y install minikube
-  - bash minikube version"
-  - bash minikube start --driver=none"
+  - printf "deb https://oplab9.parqtec.unicamp.br/pub/repository/debian/ ./" >> /etc/apt/sources.list
+  - wget https://oplab9.parqtec.unicamp.br/pub/key/openpower-gpgkey-public.asc
+  - apt-key add openpower-gpgkey-public.asc
+  - apt-get update
+  - apt -y install docker-ce
+  - apt -y install sudo
+  - apt -y install conntrack
+  - apt-get -y install minikube
+  - minikube version"
+  - minikube start --driver=none"
