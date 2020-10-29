@@ -17,5 +17,5 @@ script:
   - apt -y install sudo
   - apt -y install conntrack
   - apt-get -y install minikube
-  - minikube version"
-  - minikube start --driver=none"
+  - minikube version
+  - minikube start --driver=none
