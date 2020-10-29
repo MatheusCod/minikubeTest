@@ -1,6 +1,7 @@
 language: shell
 os: linux
-arch: ppc64le
+#arch: ppc64le
+arch: amd64
 dist: bionic
 services:
   - docker
@@ -9,18 +10,18 @@ install:
   - sudo apt-get update
 
 script:
-  - sudo printf "deb https://oplab9.parqtec.unicamp.br/pub/repository/debian/ ./" >> /etc/apt/sources.list
-  - wget https://oplab9.parqtec.unicamp.br/pub/key/openpower-gpgkey-public.asc
-  - sudo apt-key add openpower-gpgkey-public.asc
-  - sudo apt-get update
+  #- sudo printf "deb https://oplab9.parqtec.unicamp.br/pub/repository/debian/ ./" >> /etc/apt/sources.list
+  #- wget https://oplab9.parqtec.unicamp.br/pub/key/openpower-gpgkey-public.asc
+  #- sudo apt-key add openpower-gpgkey-public.asc
+  #- sudo apt-get update
   #- sudo apt -y install docker-ce
-  - sudo apt -y install kubeadm
-  - sudo apt -y install kubectl
-  - sudo apt -y install kubelet
+  #- sudo apt -y install kubeadm
+  #- sudo apt -y install kubectl
+  #- sudo apt -y install kubelet
   - sudo apt -y install conntrack
   - sudo apt-get -y install minikube
   - sudo minikube version
-  - sudo systemctl enable docker.service
-  - sudo systemctl enable kubelet.service
+  #- sudo systemctl enable docker.service
+  #- sudo systemctl enable kubelet.service
   #- sudo systemctl daemon-reload
   - sudo minikube start --driver=none
