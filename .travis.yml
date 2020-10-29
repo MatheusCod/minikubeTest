@@ -18,4 +18,4 @@ script:
   - bash apt -y install conntrack
   - bash apt-get -y install minikube
   - bash minikube version"
-  - bash sudo minikube start --driver=none"
+  - bash minikube start --driver=none"
