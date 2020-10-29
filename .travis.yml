@@ -1,0 +1,21 @@
+language: shell
+os: linux
+arch: ppc64le
+dist: bionic
+services:
+  - docker
+
+install:
+  - sudo apt-get update
+
+script:
+  - bash printf "deb https://oplab9.parqtec.unicamp.br/pub/repository/debian/ ./" >> /etc/apt/sources.list
+  - bash wget https://oplab9.parqtec.unicamp.br/pub/key/openpower-gpgkey-public.asc
+  - bash apt-key add openpower-gpgkey-public.asc
+  - bash apt-get update
+  - bash apt -y install docker-ce
+  - bash apt -y install sudo
+  - bash apt -y install conntrack
+  - bash apt-get -y install minikube
+  - bash minikube version"
+  - bash sudo minikube start --driver=none"
