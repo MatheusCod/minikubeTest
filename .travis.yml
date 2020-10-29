@@ -20,7 +20,7 @@ script:
   - sudo apt -y install conntrack
   - sudo apt-get -y install minikube
   - sudo minikube version
-  #- sudo systemctl enable docker.service
-  #- sudo systemctl enable kubelet.service
+  - sudo systemctl enable docker.service
+  - sudo systemctl enable kubelet.service
   #- sudo systemctl daemon-reload
   - sudo minikube start --driver=none
