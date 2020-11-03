@@ -10,11 +10,11 @@ install:
   - sudo apt-get update
 
 script:
-  #- sudo printf "deb https://oplab9.parqtec.unicamp.br/pub/repository/debian/ ./" >> /etc/apt/sources.list
-  #- wget https://oplab9.parqtec.unicamp.br/pub/key/openpower-gpgkey-public.asc
-  #- sudo apt-key add openpower-gpgkey-public.asc
-  #- sudo apt-get update
-  #- sudo apt -y install docker-ce
+  - sudo printf "deb https://oplab9.parqtec.unicamp.br/pub/repository/debian/ ./" >> /etc/apt/sources.list
+  - wget https://oplab9.parqtec.unicamp.br/pub/key/openpower-gpgkey-public.asc
+  - sudo apt-key add openpower-gpgkey-public.asc
+  - sudo apt-get update
+  - sudo apt -y install docker-ce
   #- sudo apt -y install kubeadm
   #- sudo apt -y install kubectl
   #- sudo apt -y install kubelet
